@@ -42,7 +42,7 @@ with col1:
     with button2:
         st.button('Close Resume',key='2') 
     with button3:
-        with open("Kelly Wong Resume 2023 v3.pdf", "rb") as pdf_file:
+        with open("data/Kelly Wong Resume 2023 v3.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         st.download_button(label="Download Resume", key='3',
                 data=PDFbyte,
@@ -50,7 +50,7 @@ with col1:
                 mime='application/octet-stream')
 
 with col2:
-    st.image('IMG_1452.jpeg', width=600)
+    st.image('images/IMG_1452.jpeg', width=600)
     
 st.markdown('---')
 
@@ -101,7 +101,7 @@ with col_3:
     col_31,col_32 = st.columns([1,2])
     with col_31:
         st.markdown('')
-        st.image('dbs-bank-logo.png')
+        st.image('images/dbs-bank-logo.png')
     with col_32:
         st.subheader('Data Science Intern')
         st.markdown('##### DBS, Singapore (Jul 2023 - Sep 2023)')
@@ -115,7 +115,7 @@ with col_4:
     col_41, col_42 = st.columns([1,2])
     with col_41:
         #st.markdown('')
-        st.image('KPMG-Logo.jpeg')
+        st.image('images/KPMG-Logo.jpeg')
     with col_42:
         st.subheader('Management Intern')
         st.markdown('##### KPMG, Singapore (Dec 2022 - Feb 2023)')
@@ -128,7 +128,7 @@ with col_7:
     col_71,col_72 = st.columns([1,2])
     with col_71:
         #st.markdown('')
-        st.image('OCBC-Bank-Logo.jpeg')
+        st.image('images/OCBC-Bank-Logo.jpeg')
     with col_72:
         st.subheader('STEM@OCBC Intern')
         st.markdown('##### OCBC, Singapore (May 2022 - Dec 2022)')
