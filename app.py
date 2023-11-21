@@ -38,11 +38,11 @@ with col1:
     button1, button2, button3 = st.columns([1,1,1])
     with button1:
         if st.button('Show Resume',key='1'):            
-            show_pdf("data/Kelly Wong Resume 2023 v3.pdf")
+            show_pdf("data/resume.pdf")
     with button2:
         st.button('Close Resume',key='2') 
     with button3:
-        with open("data/Kelly Wong Resume 2023 v3.pdf", "rb") as pdf_file:
+        with open("data/resume.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
         st.download_button(label="Download Resume", key='3',
                 data=PDFbyte,
