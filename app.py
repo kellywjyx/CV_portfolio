@@ -16,39 +16,33 @@ def show_pdf(file_path):
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="600" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
-    st.markdown('"""<embed src="https://github.com/kellywjyx/CV_portfolio/blob/a06bb441217e0b6f4ab70bc5699a9a47faa6ef5c/data/resume.pdf" width="800" height="800">""", unsafe_allow_html=True')
+    st.markdown("""<embed src="https://github.com/kellywjyx/CV_portfolio/blob/a06bb441217e0b6f4ab70bc5699a9a47faa6ef5c/data/resume.pdf" width="800" height="800">""", unsafe_allow_html=True)
     
 email = "mailto:kellywongjieyin@gmail.com"
 linkedin = "https://www.linkedin.com/in/kelly-wong-jie-yin-a64023205/"
 website = "https://github.com/kellywjyx/"
 
-col1, col2 = st.columns([1,1])
+col1, col2 = st.columns([3,2])
 with col1:
     st.title('Hi, I\'m Kelly Wong')
     #st.write('Contact Information: [Your Email](mailto:kellywongjieyin@gmail.com), [LinkedIn Profile](https://www.linkedin.com/in/kelly-wong-jie-yin-a64023205/), [GitHub Profile](https://github.com/kellywjyx/)')
-    button1, button2, button3= st.columns([1,1,1])
+    button1, button2, button3, button4= st.columns([1,1,1,1])
     with button1:
         st.link_button('📧 Email',email)
     with button2:
         st.link_button('✉️ Linkedin',linkedin)
     with button3:
         st.link_button('🔗 Github',website)
-        
-    st.header('About Me')
-    st.write("I am currently a final year student at Nanyang Technological University, where I am pursuing a Bachelor's degree in Data Science and Artificial Intelligence. I am exploring different career paths, with a particular interest in becoming a Data Scientist. Please feel free to reach out to me if you would like to collaborate or discuss any opportunities. I am eager to connect and learn from professionals in the industry.")
-    button1, button2, button3 = st.columns([1,1,1])
-    with button1:
-        if st.button('Show Resume',key='1'):            
-            show_pdf("data/resume.pdf")
-    with button2:
-        st.button('Close Resume',key='2') 
-    with button3:
+    with button4:
         with open("data/resume.pdf", "rb") as pdf_file:
             PDFbyte = pdf_file.read()
-        st.download_button(label="Download Resume", key='3',
+        st.download_button(label="Download Resume", key='1',
                 data=PDFbyte,
                 file_name="Kelly_Wong_Jie_Yin_resume.pdf",
                 mime='application/octet-stream')
+        
+    st.header('About Me')
+    st.write("I am currently a final year student at Nanyang Technological University, where I am pursuing a Bachelor's degree in Data Science and Artificial Intelligence. I am exploring different career paths, with a particular interest in becoming a Data Scientist. Please feel free to reach out to me if you would like to collaborate or discuss any opportunities. I am eager to connect and learn from professionals in the industry.")
 
 with col2:
     st.image('images/IMG_1452.jpeg', width=600)
