@@ -38,7 +38,7 @@ with col1:
     button1, button2, button3 = st.columns([1,1,1])
     with button1:
         if st.button('Show Resume',key='1'):            
-            show_pdf("Kelly Wong Resume 2023 v3.pdf")
+            show_pdf("data/Kelly Wong Resume 2023 v3.pdf")
     with button2:
         st.button('Close Resume',key='2') 
     with button3:
