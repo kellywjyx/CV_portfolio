@@ -58,8 +58,8 @@ col_1,col_2 = st.columns([1,1])
 with col_1:
     st.markdown('#### Flowers Classification Using Neural Networks')
     st.write('[GitHub](https://github.com/kellywjyx/flower_102/tree/main)')
-    acc = ['88.13%','84.92%','97.11%','79.10%','82.90%']
-    f1_score = ['0.882','0.850','0.971','0.443','0.829']
+    acc = ['88.13%','84.92%','97.11%','No Info','82.90%']
+    f1_score = ['0.882','0.850','0.971','0.791','0.829']
     models = ['ResNet-50','MobileNet V2','Vision Transformers','K-Shot Learning','Triplet Loss Network']
     df_models = pd.DataFrame([models,acc,f1_score]).T
     df_models.columns = ['Model','Test Accuracy','F1 Score']
